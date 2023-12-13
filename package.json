@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/galaxydragon0702/hardhat.git"
+    "url": "git+https://github.com/bobbydawson0702/hardhat.git"
   },
   "keywords": [
     "hardhat"
@@ -16,14 +16,15 @@
   "author": "galaxydragon",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/galaxydragon0702/hardhat/issues"
+    "url": "https://github.com/bobbydawson0702/hardhat/issues"
   },
-  "homepage": "https://github.com/galaxydragon0702/hardhat#readme",
+  "homepage": "https://github.com/bobbydawson0702/hardhat#readme",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^4.0.0",
     "hardhat": "^2.19.2"
   },
   "dependencies": {
+    "@openzeppelin/contracts": "^5.0.1",
     "dotenv": "^16.3.1"
   }
 }
