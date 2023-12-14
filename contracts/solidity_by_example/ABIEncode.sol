@@ -14,4 +14,29 @@ contract AbiEncode {
         (bool ok, ) = _contract.call(data);
         require(ok, "call failed");
     }
+
+    function encodeWithSignature(
+        address to,
+        uint amount
+    ) external pure returns (bytes memory) {
+        // Typo is not checked - "transfer(address, uint)"
+        return
+            abi.encodeWithSignature("transfer(address, uint256)", to, amount);
+    }
+
+    function encodeWithSelector(
+        address to,
+        uint amount
+    ) external pure returns (bytes memory) {
+        // Type is not cheked - (IERC20.transfer.selector, true, amount)
+        return abi.encodeWithSelector(IERC20.transfer.selector, to, amount);
+    }
+
+    function encodeCall(
+        address to,
+        uint amount
+    ) external pure returns (bytes memory) {
+        // Typo and type errors will not compile
+        return abi.encodeCall(IERC20.transfer, (to, amount));
+    }
 }
