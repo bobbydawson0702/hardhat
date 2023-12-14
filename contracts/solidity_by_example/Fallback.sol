@@ -64,7 +64,7 @@ contract Counter {
 contract TestFallbackInputOutput {
   event Log(bytes res);
 
-  functiontest(address _fallback, bytes calldata data) external {
+  function test(address _fallback, bytes calldata data) external {
     (bool ok, bytes memory res) = _fallback.call(data);
     require(ok, "call failed");
     emit Log(res);
